@@ -40,7 +40,7 @@ h1 {
 .card {
     padding: 10px 25px 10px 25px;
     border-radius: 10px;
-    background: 	#DE3163;
+    background: #DE3163;
     width: 85vw;
     color: #fff;
     display: inline-block;
@@ -83,7 +83,13 @@ h1 {
     font-size: 2rem;
      padding-right: 30px;
 }
-
+.weather{
+    
+    display:inline;
+    font-family: 'Times New Roman';
+    font-size: 2rem;
+     padding-right: 30px;
+    
     </style>
 </head>
 <body>
@@ -96,6 +102,7 @@ h1 {
         <div class="greet" id="greet"></div>
       <div class="date" id="date"></div>
       <div class="clock">
+        <a class="weatherwidget-io" href="https://forecast7.com/en/12d9280d13/tambaram/" data-label_1="TAMBARAM" data-font="Times New Roman" data-icons="Climacons Animated" data-mode="Current" data-theme="weather_one" >TAMBARAM WEATHER</a>
         <div class="time" id="hour"></div>
         <div class="colon">:</div>
         <div class="time" id="min"></div>
@@ -127,11 +134,11 @@ else{
 }
 hrs = today.getHours();
 if (hrs < 12)
-        greet = 'Good Morning  Cynthia Rajona';
+        greet = 'Good Morning Cynthia Rajona';
     else if (hrs >= 12 && hrs <= 17)
         greet = 'Good Afternoon Cynthia Rajona';
     else if (hrs >= 17 && hrs <= 24)
-        greet = 'Good Evening  Cynthia Rajona';
+        greet = 'Good Evening Cynthia Rajona';
 // console.log(today.toLocaleTimeString());
 document.getElementById('greet').innerHTML = greet;
 document.getElementById('hour').innerHTML = hour;
@@ -165,11 +172,8 @@ setTimeout(dateTime, 500);
 
 dateTime()
 // END
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
 </script>
 
 </body>
 </html>
-<a class="weatherwidget-io" href="https://forecast7.com/en/12d9280d13/tambaram/" data-label_1="TAMBARAM" data-label_2="WEATHER" data-font="Times New Roman" data-icons="Climacons Animated" data-mode="Current" data-theme="weather_one" >TAMBARAM WEATHER</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
